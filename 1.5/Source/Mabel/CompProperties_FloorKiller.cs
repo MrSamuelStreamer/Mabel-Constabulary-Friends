@@ -48,7 +48,8 @@ public class CompFloorKiller : ThingComp
         IntVec3 cell = parent.Position;
         Map parentMap = parent.Map;
         if (parentMap == null || !parentMap.terrainGrid.CanRemoveTopLayerAt(cell)) return false;
-        (parent as Pawn)?.jobs.TryTakeOrderedJob(JobMaker.MakeJob(JobDefOf.RemoveFloor, cell));
+        parentMap.terrainGrid.RemoveTopLayer(cell);
+        FilthMaker.RemoveAllFilth(cell, parentMap);
         FilthMaker.TryMakeFilth(cell.RandomAdjacentCell8Way(), parentMap, ThingDefOf.Filth_Dirt, 2, FilthSourceFlags.Terrain);
         FilthMaker.TryMakeFilth(cell.RandomAdjacentCell8Way(), parentMap, ThingDefOf.Filth_Vomit, 1, FilthSourceFlags.Pawn);
         Messages.Message("Mabel_FloorDestructionMessage".Translate(parent.LabelShort), parent, MessageTypeDefOf.NegativeEvent, historical: false);

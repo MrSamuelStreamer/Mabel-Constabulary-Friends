@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ModMetaData>
-  <name>Mabel Constabulary</name>
-  <packageId>MSS.Mabel</packageId>
-  <author>MrSamuelStreamer</author>
-  <supportedVersions>
-    <li>1.5</li>
-  </supportedVersions>
-  <description>Wow, it's the one and only MABEL CONSTABULARY, the mostly poodle labradoodle. She bark, she woof, she run, wow, she still run. Jesus christ, she won't stop running. No, I'm not throwing your ball anymore. Please, my arms ache. Why are you running this time? Thanks for barking at that child, I feel a lot safer now.</description>
+    <name>Mabel Constabulary</name>
+    <packageId>MSS.Mabel</packageId>
+    <author>MrSamuelStreamer</author>
+    <supportedVersions>
+        <li>1.5</li>
+        <li>1.6</li>
+    </supportedVersions>
+    <description>Wow, it's the one and only MABEL CONSTABULARY, the mostly poodle labradoodle. She bark, she woof, she run, wow, she still run. Jesus christ, she won't stop running. No, I'm not throwing your ball anymore. Please, my arms ache. Why are you running this time? Thanks for barking at that child, I feel a lot safer now.</description>
+    <modDependencies>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+            <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>brrainz.harmony</li>
+        <li>Ludeon.RimWorld</li>
+        <li>Ludeon.RimWorld.Ideology</li>
+        <li>Ludeon.RimWorld.Royalty</li>
+        <li>Ludeon.RimWorld.Biotech</li>
+        <li>Ludeon.RimWorld.Anomaly</li>
+        <li>Ludeon.RimWorld.Odyssey</li>
+    </loadAfter>
 </ModMetaData>
